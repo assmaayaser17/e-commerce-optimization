@@ -42,20 +42,7 @@ export default function LoginForm() {
   });
 
   return (
-    <div
-      className="
-        bg-white/20 backdrop-blur-md 
-        p-6 sm:p-8 md:p-10 
-        rounded-2xl shadow-2xl 
-        w-full max-w-[380px] 
-        mx-auto
-      "
-    >
-      {/* Title */}
-      <h2 className="text-3xl font-semibold text-white text-center mb-6">
-        Sign in
-      </h2>
-
+    <>
       {/* Form  */}
       <Form {...form}>
         <form
@@ -127,6 +114,6 @@ export default function LoginForm() {
           )}
         </form>
       </Form>
-    </div>
+    </>
   );
 }

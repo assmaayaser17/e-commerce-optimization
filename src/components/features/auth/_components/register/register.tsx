@@ -2,7 +2,6 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -54,12 +53,7 @@ export default function RegisterForm() {
   });
 
   return (
-    <div className="bg-white/20 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-[380px] mx-auto">
-      {/* Title */}
-      <h2 className="text-3xl font-semibold text-white text-center mb-6">
-        Register
-      </h2>
-
+    <>
       {/* Form */}
       <Form {...form}>
         <form
@@ -70,9 +64,9 @@ export default function RegisterForm() {
             formData.append("password", data.password);
             formData.append("rePassword", data.rePassword);
             if (data.phone) formData.append("phone", data.phone);
-           startTransition(() => {
-      formAction(formData);
-    });
+            startTransition(() => {
+              formAction(formData);
+            });
           })}
           className="space-y-4"
         >
@@ -142,7 +136,9 @@ export default function RegisterForm() {
             name="rePassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white/80">Confirm Password</FormLabel>
+                <FormLabel className="text-white/80">
+                  Confirm Password
+                </FormLabel>
                 <FormControl>
                   <Input
                     type="password"
@@ -162,7 +158,9 @@ export default function RegisterForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white/80">Phone (optional)</FormLabel>
+                <FormLabel className="text-white/80">
+                  Phone (optional)
+                </FormLabel>
                 <FormControl>
                   <Input
                     type="text"
@@ -187,7 +185,9 @@ export default function RegisterForm() {
 
           {/* Server error */}
           {state?.error && (
-            <p className="text-red-400 text-sm mt-2 text-center">{state.error}</p>
+            <p className="text-red-400 text-sm mt-2 text-center">
+              {state.error}
+            </p>
           )}
 
           {/* Server success */}
@@ -198,6 +198,6 @@ export default function RegisterForm() {
           )}
         </form>
       </Form>
-    </div>
+    </>
   );
 }

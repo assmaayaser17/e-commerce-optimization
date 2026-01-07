@@ -22,7 +22,7 @@ export default function RegisterPage() {
 
         {/* Register form */}
         <div className="flex-1 flex justify-center w-full">
-          <AuthContainer title="Sign in">
+          <AuthContainer title="register">
             <RegisterForm />
           </AuthContainer>
         </div>

@@ -6,7 +6,6 @@ declare type User = {
   createdAt: string;
 };
 
-// Register types
 declare type RegisterFields = {
   name: string;
   email: string;

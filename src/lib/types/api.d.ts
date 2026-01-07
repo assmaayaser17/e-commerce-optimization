@@ -18,4 +18,5 @@ declare type Metadata = {
 
 declare type PaginatedResponse<T> = {
   metadata: Metadata;
+  data: Category[];
 } & T;

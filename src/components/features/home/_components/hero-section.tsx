@@ -9,7 +9,7 @@ export default function HeroSection() {
           rounded-3xl shadow-2xl 
           p-8 md:p-12 
           flex flex-col md:flex-row 
-          items-center gap-8
+          items-center gap-8 mt-20
         "
     >
       {/* Image */}
